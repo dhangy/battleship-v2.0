@@ -1,0 +1,144 @@
+td {
+ height: 46px;
+ width: 46px;
+ text-align: center;
+ min-width: 46px;
+ min-height: 46px;
+
+}
+
+.blue_one{
+    /*background-color: #ade9ff;*/
+    /*background-color: #08dbd7;*/
+    background-color: #21cecb;
+
+}
+.blue_two {
+    /*background-color: #36d8bf;*/
+    background-color: #2bfffb;
+
+}
+.miss{
+  background-color: #fff7f7;
+}
+
+.hit{
+  background-color: #f26060 !important;
+}
+
+#gridParent {
+    display:inline-flex;
+    justify-content: space-evenly;
+}
+
+#playerBoardContainer{
+margin-left: 120px;
+}
+
+
+#banner{
+    display: inline-flex;
+    height: 5%;
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+.bannerIcons {
+    height: 100px;
+    margin: 0px auto;
+}
+
+#setupSelections{
+    height: 500px;
+    width: 500px;
+    background-color: #545963;
+    border-style:solid;
+    border-color:#8d94a3;
+    color: white;
+    margin-left: 120px;;
+
+
+
+}
+
+.shipButtons{
+    width: 100px;
+    height: 50px;
+}
+
+.rowOne{
+     margin:0 23px 0 23px;
+}
+
+.rowTwo{
+    margin: 20px 80px 0 80px;
+}
+
+.placementOption {
+    width: 9s0px;
+    height: 60px;
+
+
+}
+
+.placementButton{
+    margin: 10px 60px 0px 60px;
+}
+
+
+#placeShip {
+    width: 75px;
+    height: 50px;
+}
+#placeShipButton{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: auto;
+    margin-right: 9px;
+    margin-top: -35px
+
+}
+
+.selectionText{
+    text-align:center;
+
+}
+
+#cellSelect{
+    height: 40px;
+    width: 80px;
+    display: block;
+    background-color: #f26060;
+    margin: auto;
+    text-align:center;
+    border: solid 1px #434851;
+}
+
+
+.alignmentRadio{
+    text-align: center;
+    margin-top: 5px;
+    margin: auto;
+
+}
+
+#vertical{
+    margin-left: -18px;
+}
+
+button{
+    background-color: #434851;
+
+}
+
+input[type="radio"] {
+    transform: scale(1.3);
+    margin-top: 5px;
+  -webkit-appearance: checkbox; /* Chrome, Safari, Opera */
+  -moz-appearance: checkbox;    /* Firefox */
+  -ms-appearance: checkbox;     /* not currently supported */
+  background: #f26060;
+}
+
+
+/* use flexbox to float the two boxes (player and setup) will make it easier to add the computer box into the fray

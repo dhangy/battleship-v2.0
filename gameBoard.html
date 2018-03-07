@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+    </head>
+    <body>
+        <div id="banner" class="blue_one">
+
+            <a href="gameLogic.html"><img id="game-logic" class = class="bannerIcons" src="assets/game-logic.png" /></a>
+            <img id ="banner-logo" class="bannerIcons" img src ="assets/battleship.gif" />
+            <a href="index.html"><img id="rules-icon" class="bannerIcons"src="assets/rules-icon.png" /></a>
+            <!-- <img id="signatureImg" class="bannerIcons" src="assets/signature.gif" alt = "signature animation" /> -->
+        </div>
+
+        <div id= "gridParent">
+            <div id="computerBoardParent">
+            <div id ="computerBoardContainer" class="grids"></div>
+            </div>
+            <div id="playerBoardParent">
+            <div id="playerBoardContainer" class = "grids"></div>
+            </div>
+
+        <div id="setupSelections">
+            <button id="placeRandomButton" class="placementButton"><img class="placementOption" src="assets/placeRandom.png" /></button>
+            <button id="placeManuallyButton" class="placementButton"><img class="placementOption" src="assets/placeManual.png" /></button>
+            <h3 class="selectionText">Pick a Ship!</h3>
+            <h3 id ="shipChoice"></h3>
+            <button id="carrierBttn" class="rowOne"><img class = "shipButtons" id="carrier" src = "assets/carrier.png" alt="carrier button"></button>
+            <button id="battleShipBttn" class="rowOne"><img class = "shipButtons" id="battleShip" src = "assets/battleship-icon.png" alt="carrier button"></button>
+            <button id="cruiserBttn" class="rowOne"><img class = "shipButtons" id="cruiser" src = "assets/cruiser.png" alt="carrier button"></button>
+            <button id="submarineBttn" class="rowTwo"><img class = "shipButtons" id="submarine" src = "assets/submarine.png" alt="carrier button"></button>
+            <button id="destroyerBttn" class"rowTwo"><img class = "shipButtons" id="destroyer" src = "assets/destroyer.png" alt="carrier button"></button>
+            <h3 class="selectionText">Select a cell from the grid!</h3>
+                <h1 id="cellSelect">(0,0)</h1>
+            <h3 class="selectionText">Do you want to place it horizontally or vertically?</h3>
+            <div id="orientationSelection">
+
+                <h3 id="orientationChoice"></h3>
+                <div class="alignmentRadio">
+                <input type="radio" name ="alignment" class="alignmentRadio" id="vertical" />
+                <label for"vertical" class="alignmentRadio">Vertical</label>
+                </div>
+                <div class="alignmentRadio">
+                <input type="radio" name="alignment" class="alignmentRadio" id="horizontal" />
+                <label for="horizontal" class="alignmentRadio">Horizontal</label>
+                    <button id="placeShipButton"><img id="placeShip" src="assets/placeShip.png" /></button>
+                </div>
+            </div>
+        </div>
+    </div>
+        <script src="model.js" type="application/javascript"></script>
+        <script src="view.js" type="application/javascript"></script>
+        <script src="constants.js" type="application/javascript"></script>
+        <script src="computerLogic.js" type="application/javascript"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        window.game = initializeGame();
+        myWinStorage = window.localStorage;
+        var playerTable = createPlayerBoard(game, "playerTable");
+        var playerGrid = document.getElementById('playerBoardContainer');
+        playerGrid.innerHTML = playerTable;
+        playerGridClick(game);
+        randomShipsButton(game);
+        // randomComputerShipPlacer(game);
+        shipButtonClick(game);
+        orientationClick(game);
+        placeShipButtonClick(game);
+    });
+        </script>
+    </body>
+</html>
