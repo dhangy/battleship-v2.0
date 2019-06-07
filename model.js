@@ -88,7 +88,6 @@ function placeShip(ship,row,col,alignment,grid){
     if(GridCheck(ship,row,col,alignment,grid) !== false){
 
         if(alignment == ALIGNMENT.HORIZONTAL){
-            console.log("WHORE");
             for(var i = 0; i < size; i++){
                 var cleanRow = +row;
                 var cleanCol = +col + i;
@@ -98,7 +97,6 @@ function placeShip(ship,row,col,alignment,grid){
         }
 
         if(alignment == ALIGNMENT.VERTICAL){
-            console.log("VERTTTTTj");
             for(var i = 0; i < size; i++){
                 var cleanRow = +row + i;
                 var cleanCol = +col;
